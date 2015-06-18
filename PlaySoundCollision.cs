@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/*
+ * Apply this to a game object with a mesh collider to play an audio file on collision.
+*/
+
+using UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(AudioSource))]

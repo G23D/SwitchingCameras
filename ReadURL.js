@@ -1,5 +1,5 @@
 ﻿#pragma strict
-//released under the MIT license by G23D Studios-Kyle "G" www.3dg2.com;
+//released under the MIT license by G23D Studios-Kyle "G" www.g23d.com;
 
 //edit between "" below to change to your own URL;
 var url = "http://photong23d.azurewebsites.net/read/readusers.aspx";

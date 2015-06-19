@@ -1,22 +1,23 @@
-﻿/*
-Apply this script to a game object then in the inspector choose an audio file via the 
-"Impact field.  Uncheck "Play On Awake" then hit the "o" key to start playing the audio.
-*/
+﻿//released under the MIT license by G23D Studios-Kyle "G" www.g23d.com;
+//Apply to a game object then in the inspector uncheck "PlayOnAwake" for the audio component and then for the
+//script choose a sound file via the "Impact" field.
 using UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(AudioSource))]
-
 public class PlaySoundKeypress : MonoBehaviour {
-
 	public AudioClip impact;
+	//http://docs.unity3d.com/ScriptReference/AudioSource.html
 	AudioSource audio;
 	
 	void Update() {
 		audio = GetComponent<AudioSource> ();
-//edit the "o" on Line 16 to another key such as "l" etc.	
+	
 		if (Input.GetKeyDown ("o")) {
 			audio.PlayOneShot (impact, 0.7F);
+		} else {
+			//http://docs.unity3d.com/ScriptReference/AudioSource.Stop.html
+			audio.Stop ();
 		}
 	}
 }
